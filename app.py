@@ -8,39 +8,35 @@ json_export_path = "export.json"
 
 while True :
     print("\n\n----- 電影管理系統 -----")
-    print("1. 建立資料表結構")
-    print("2. 匯入電影資料檔")
-    print("3. 查詢電影")
-    print("4. 新增電影")
-    print("5. 修改電影")
-    print("6. 刪除電影")
-    print("7. 匯出電影")
-    print("8. 離開系統")
+    print("1. 匯入電影資料檔")
+    print("2. 查詢電影")
+    print("3. 新增電影")
+    print("4. 修改電影")
+    print("5. 刪除電影")
+    print("6. 匯出電影")
+    print("7. 離開系統")
     print("------------------------")
     num = input("請選擇操作選項 (1-8) ： ")
 
     if num == "1" :
-        create_table(DB_path)
+        import_movies(DB_path, json_import_path)
 
     elif num == "2" :
-        list_rpt(DB_path, json_import_path)
-
-    elif num == "3" :
         search_movies(DB_path)
 
-    elif num == "4" :
+    elif num == "3" :
         add_movie(DB_path)
 
-    elif num == "5" :
+    elif num == "4" :
         modify_movie(DB_path)
 
-    elif num == "6" :
+    elif num == "5" :
         delete_movies(DB_path)
 
-    elif num == "7" :
+    elif num == "6" :
         export_movies(DB_path, json_export_path)
 
-    elif num == "8" :
+    elif num == "7" :
         break
 
     else :
