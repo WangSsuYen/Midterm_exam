@@ -25,10 +25,10 @@ while True :
         search_movies(DB_path)
 
     elif num == "3" :
-        add_movie(DB_path)
+        add_movies(DB_path)
 
     elif num == "4" :
-        modify_movie(DB_path)
+        modify_movies(DB_path)
 
     elif num == "5" :
         delete_movies(DB_path)
